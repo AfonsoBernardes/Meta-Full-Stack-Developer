@@ -64,6 +64,8 @@
     Host: developer.mozilla.org
     Accept-Language: en
 
+    {"key": "value"}
+
     > METHOD: describes the type of action to perform (eg. GET, POST, PUT, DELETE)
     > PATH: where the resource is stored on the web server (eg example.com/images)
     > HEADERS: contains additional information about the request and the client
