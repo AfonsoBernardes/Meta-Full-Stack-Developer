@@ -55,7 +55,7 @@
 
 * A HTTP request contains a method, path protocol and headers
 
-    <METHOD> <PATH> <PROTOCOL>
+    <METHOD> <PATH> <PROTOCOL VERSION>
     <HEADERS>
 
     GET / HTTP/1.1
