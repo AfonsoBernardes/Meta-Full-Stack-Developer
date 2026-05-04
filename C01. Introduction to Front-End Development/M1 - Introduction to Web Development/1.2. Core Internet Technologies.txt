@@ -51,4 +51,34 @@
 
 --- Hypertext Transfer Protocol (HTTP) ---
 
+* Core request-response operation protocol used across the web, enabling the browsers to communicate with web servers hosting websites. A client sends an HTTP request to a server which sends a HTTP response back to the client.
 
+* A HTTP request contains a method, path protocol and headers
+
+    <METHOD> <PATH> <PROTOCOL>
+    <HEADERS>
+
+    GET / HTTP/1.1
+    Host: developer.mozilla.org
+    Accept-Language: en
+
+    > METHOD: describes the type of action to perform (eg. GET, POST, PUT, DELETE)
+    > PATH: where the resource is stored on the web server (eg example.com/images)
+    > HEADERS: contains additional information about the request and the client
+
+* A HTTP response is similar to the request
+
+    <PROTOCOL> <STATUS CODE> <MESSAGE>
+    <HEADERS>
+    \r\n
+    <MESSAGE BODY>
+
+* Status codes are grouped according to their purpose:
+
+    > Informational are provisional and interim before the actual response. Range from 100 to 199.
+    > Successful indicate the request was successefully processed by the server. Range from 200 to 299.
+    > Redirection indicate to the client that the resource was moved to a different part. Range from 300 to 399.
+    > Client Error indicate the request contains bad syntax or content and cannot be processed by the server. Range from 400 to 499.
+    > Server Error indicate that a failure occured on the web server when processing the request. Range from 500 to 599.
+
+* HTTPS uses encryption to establish a secure connection, maintaining simple HTTP request and reponse behaviour; before the content is sent, it is turned into a "secret code" which can only be read by the destination computer.
