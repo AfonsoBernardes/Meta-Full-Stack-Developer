@@ -1,0 +1,114 @@
+=== How the Web Works ===
+
+* Searching things online is only possible because two devices are connected via a wired or wireless connection, fomring a network. We can connect other devices to the network, but it quickly gets complicated because every device needs to be connected to one another.
+
+* A netwrok switch solves this problem by connecting to other network switches, allowing machines to connect, forming an interconnected network, The Internet.
+
+* Websites are provided by computers called servers, while we (our computers) are the clients. This is called the Client-Server Model.
+
+
+--- Web Servers ---
+
+* A server is a computer which runs apps and provides services the clients. Data centers host many servers, ensuring continuous power, internet connection and are that they are always running.
+
+* Once the hardware is installed on a data centre, software can run on it. A web server has many functions.
+
+    > Website storage and administration
+    > Data storage
+    > Security
+    > Managing email
+    > handle web requests
+
+* When we search for a website, the web server sends you back to that website's content: Request-Response Cycle
+
+
+--- Websites and webpages ---
+
+* A webpage is a document which displays images, text, videos and other content, a website is a connection of webpages linked together. Not all connections must link withing the same website, it can send us to other websites.
+
+* In it's most basic form, a webpages is just a text document, whoever, there are several technologies which help us work with them.
+
+    > HTML (HyperText Markup Language)
+        - structures the content
+        - uses markup tags like <h1>, <p>, <img>, <div>, describing the content being displayed
+        - the way HTML describes contenc is known as markup
+
+    > CSS (Cascading Style Sheets)
+        - controls the colours and style
+        - enhances the HTML elements and telling them how to display
+
+    > JavaScript
+        - is responsible for the user interaction
+        - porgramming language built into the browser
+        - provides tools for interactivity, data processing, control and action
+
+* How does the code actually get translated to display content seen on the screen? When a copy of a webpage is sent from the web server to a browser, each line is processed in sequential order from first to last, and as it is interpreted, the browser creates the visual representation seen on screen. This is called page rendering.
+
+* The response from the webserver mus be a complete web page in order to fulfill the request.
+
+
+--- Web Browsers ---
+
+* A web browser is a software application that you use to browse the world wide web.
+
+* A browser sends a request to a web server and recieving a response containing the content to be displayed on screen.
+
+* A URL (Uniform Resource Locator) serves as the address for the website we want to visit. A URL contains a protocol (HTTP) and the domain name.
+
+* When we search for a website on a broswer, a request is sent to another computer (the web server, which allows other computers to request data).
+
+* The web server retrieves information from a database which stores said information, and the server sends that infromation back to the browser.
+
+* When the broswer recieves the information sent by the server, the  web page (simply a coded document) is rendered by the browser and displayed back to us.
+
+
+--- Web Hosting ---
+
+* Web hosting is a service where we place our website and files on the hosting company's web server, renting the space in return for stable and secure storage. There a re different types of web hosting
+
+    > Shared Hosting
+        - pay for a location on a web server containing many web hosting accounts with shared hosting.
+        - share processing power, memory and bandwidht, which can impact performance.
+
+    > Virtual Private Surface (VPS)
+        - virtual server with dedicated CPUs, memory and bandwidth resources
+        - runs on hardware server with other VPS instances, but since resources are fixed, per instance, performance likely won't be impacted.
+
+    > Dedicated Hosting
+        - hardware service dedicated to you only
+        - all hardware, memory, bandwidthresources belong to you
+
+    > Cloud Hosting
+        - website runs on a cloud environment, which spans across different physical or virtual servers
+        - if a server fails, your website will be "distrubuted" to other servers where it can run, without interrupting
+        - we can use as many resources as needed without hardware limitations, paying according to resources used
+
+
+--- Knowledge Check ---
+
+Q1. In the client/server model, the accessing device is a ____________________.
+    Ans: Client
+
+Q2. The part of the website address that you type in your web browser to navigate to a website, which uniquely identifies the site and often includes extensions like .com or .org, is called a ______.
+    Ans: Domain Name
+
+Q3. Servers are typically stored in a building called a ____________________.
+    Ans: Data Center
+
+Q4. The physical components of a server are called the ____________________.
+    Ans: Hardware
+
+Q5. The purpose of a web server is to ____________________.
+    Ans: Receive requests from a web browser and to respond with the correct content for that request.
+
+Q6. True or False. A website can consist of multiple web pages linked together.
+    Ans: True
+
+Q7. The links you click on in your web browser are known as ____________________.
+    Ans: Hyperlinks
+
+Q8. Which of these are the 3 main technologies of the web browser? Select all that apply.
+    Ans: HTML, CSS, JavaScript
+
+Q9. When you run a website on the cloud, the website is restricted to one physical server.
+    Ans: False
