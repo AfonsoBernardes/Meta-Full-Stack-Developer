@@ -57,6 +57,8 @@
 
     <METHOD> <PATH> <PROTOCOL VERSION>
     <HEADERS>
+    \r\n
+    <REQUEST BODY>
 
     GET / HTTP/1.1
     Host: developer.mozilla.org
@@ -65,6 +67,7 @@
     > METHOD: describes the type of action to perform (eg. GET, POST, PUT, DELETE)
     > PATH: where the resource is stored on the web server (eg example.com/images)
     > HEADERS: contains additional information about the request and the client
+    > BODY: included when using the HTTP POST and PUT methods to transmit data.
 
 * A HTTP response is similar to the request
 
