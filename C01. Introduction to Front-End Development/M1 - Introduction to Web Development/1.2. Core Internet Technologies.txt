@@ -2,4 +2,53 @@
 
 --- Internet Protocols ---
 
-*
+* The way computers send and recieve data across the internet can compared to a postal system. Computers have addresses we can use to send packets of information, these are called IP Adresses.
+
+* When we send data between computers, the computers are the destination which request and recieve data, and the network are the routes the information travels across. Internet protocols are what make these transactions possible, IP Version 4 and IP Version 6 are the most widely use standards.
+
+* Every computer on a netwrok is assigned an IP Address:
+
+    > In IP Version 4, an IP address contains four octets, separated by periods, i.e., 192.0.2.235.
+
+    > In IP Version 6, an IP address contains eight groups of hexadecimal digits separated by a colon.
+
+* When we send data across a netwrok, we send it as a series of messages known as IP Packets, or dataframs, which contain a header and a payload, which is the data. These packets include the destination IP address and the source IP address in the headers.
+
+* When sending multiple messages, it is possible they are recieved out of order, damaged or even lost. The payload contains other protocols:
+
+    > TCP (Transmission Control Protocol) can solve all of the three issues but at a small delay. It is used to sen data which must arrive correctly and in order, like text or image files.
+
+    > UDP (User Datagram Protocol) solves the corrupted package issue, but packets can still arrive out of order or not at all; it is used for sending data which can tolerate some loss, like voice calls or video streaming.
+
+
+--- LAB: Exploring Internet Protocols through Command-Line Tool ---
+
+    > Command: ping courser.org
+
+    > Output: 
+        PING coursera.org (99.86.159.65) 56(84) bytes of data.
+
+        64 bytes from server-99-86-159-65.lis50.r.cloudfront.net (99.86.159.65): icmp_seq=1 ttl=250 time=12.6 ms
+        64 bytes from server-99-86-159-65.lis50.r.cloudfront.net (99.86.159.65): icmp_seq=2 ttl=250 time=15.3 ms
+
+        --- coursera.org ping statistics ---
+        9 packets transmitted, 9 received, 0% packet loss, time 8011ms
+        rtt min/avg/max/mdev = 12.564/15.236/16.595/1.029 ms
+
+        - coursera.org (99.86.159.65): the domain name coursera-org resolves to the given IP address, which is the address of on of Coursera's servers.
+
+        - Each line shows the details of the ICMP Echo Reply packets received
+
+            1. 64 bytes: The size of each ICMP packet sent and received is 64 bytes.
+            2. time=12.6 ms/ time=15.3 ms: round-trip times (RTT) it took for the packet to travel from your computer to the server and back.
+            3. ttl=250: Time-to-Live value of the packet. This value decreases as the packet passes through network hops (routers). It gives an idea of the network's distance.
+
+        - Ping Statistics
+
+            1. 9 packets transmitted, 9 received, 0% packet loss
+            2. rtt min/avg/max/mdev = fastest/average/maximum/mean_deviation for the packets' round-trip
+
+
+--- Hypertext Transfer Protocol (HTTP) ---
+
+
