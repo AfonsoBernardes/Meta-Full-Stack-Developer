@@ -145,3 +145,12 @@
     * The data is transmitted insecurely when using the File Transfer Protocol. This means that third parties may understand the data that you are sending. This is not right if you transmit company files such as software and databases.
 
     * The SSH File Transfer Protocol, alternatively called the Secure File Transfer Protocol, can be used to transfer files over the SSH protocol. This ensures that the data is transmitted securely. Most FTP clients also support the SFTP protocol.
+
+
+--- Webpages, Websites and Web Apps ---
+
+* A typical webpage is a single pages with HTML, CSS and JS. A website is a collection of webpages under the same domain name.
+
+* Website and Web Applications are often used interchangibily, whoever, the key difference is the level of interactivity and dynamic content.
+
+* A website is more informative while a web app is more interactive. A company website usually displays info about themselves, but the same company's web app would allow you to, for example, log in, edit you account details, order food, etc.
