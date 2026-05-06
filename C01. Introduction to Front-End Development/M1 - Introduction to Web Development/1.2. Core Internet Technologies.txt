@@ -87,3 +87,61 @@
     > Server Error indicate that a failure occured on the web server when processing the request. Range from 500 to 599.
 
 * HTTPS uses encryption to establish a secure connection, maintaining simple HTTP request and reponse behaviour; before the content is sent, it is turned into a "secret code" which can only be read by the destination computer.
+
+
+--- Intro to HTML, CSS & JavaScript ---
+
+* These three technologies "work together" to create a functional webpage. HTML defines the contents of the page, CSS adds positioning and styling while JavaScript manages the logic behind it.
+
+* The .html file references the .css file to apply styling and the .js file. The browser will retrieve the .js file and process it. In a video player webpage with a button to play/ pause a video, the .js file will
+    > registers a listener on the button which executes some code when clicked.
+    > when the code runs, it checks the current state of the vidoe, i.e., if the video is paused, it will play the video and change the icon on the button to pause; on the other hand, if the video is playing, the .js code will pause the video and change the icon to a play icon.
+
+
+--- Other Internet Protocols ---
+
+-> Dynamic Host Configuration Protocol (DHCP)
+
+    * When a computer connects to a network, the DHCP  is used to assign your computer an IP address.
+
+    *A computer communicates over User Datagram Protocol (UDP) using the protocol with a type of server called a DHCP server. The server keeps track of computers on the network and their IP addresses. It will assign your computer an IP address and respond over the protocol to let it know which IP address to use.
+
+    *Once your computer has an IP address, it can communicate with other computers on the network.
+
+
+-> Domain Name System Protocol (DNS)
+
+    * A computer needs a way to know with which IP address to communicate when you visit a website in your web browser. The Domain Name System Protocol, provides this function.
+    * The computer then checks with the DNS server associated with the domain name and then returns the correct IP address.
+
+
+-> Internet Message Access Protocol (IMAP)
+
+    * A device (mobile or tablet) needs a way to download emails and manage the mailbox on the server storing the emails; whihc is the purpose of this protocol.
+
+-> Simple Mail Transfer Protocol (SMTP)
+
+    * Once the emails are on the device, one needs a way to send emails. The Simple Mail Transfer Protocol allows email clients to submit emails for sending via an SMTP server. One can also use it to receive emails from an email client, but IMAP is more commonly used.
+
+
+-> File Transfer Protocol (FTP)
+
+    * Running websites and web applications on the Internet needs a way to transfer the files from the local computer to the server they'll run on. FTP is the standar protocol used for this purpose.
+
+    * FTP allows you to list, send, receive and delete files on a server. Your server must run an FTP Server and you will need an FTP Client on your local machine.
+
+
+-> Secure Shell Protocol (SSH)
+
+    * When working with servers, we need a way to log in and interact with the computer remotely; the most common method being Secure Shell Protocol.
+
+    * Using an SSH client allows you to connect to an SSH server running on a server to perform commands on the remote computer.
+
+    *All data sent over SSH is encrypted. This means that third parties cannot understand the data transmitted. Only the sending and receiving computers can understand the data.
+
+
+-> Secure File Transfer Protocol (SFTP)
+
+    * The data is transmitted insecurely when using the File Transfer Protocol. This means that third parties may understand the data that you are sending. This is not right if you transmit company files such as software and databases.
+
+    * The SSH File Transfer Protocol, alternatively called the Secure File Transfer Protocol, can be used to transfer files over the SSH protocol. This ensures that the data is transmitted securely. Most FTP clients also support the SFTP protocol.
