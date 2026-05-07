@@ -154,3 +154,39 @@
 * Website and Web Applications are often used interchangibily, whoever, the key difference is the level of interactivity and dynamic content.
 
 * A website is more informative while a web app is more interactive. A company website usually displays info about themselves, but the same company's web app would allow you to, for example, log in, edit you account details, order food, etc.
+
+
+--- Knowledge Check: The Web and the Internet ---
+
+Q1. When sending a message to another computer, the source and destination are specified using  ________________.
+    Ans: an IP Address
+
+Q2. Which of the following are valid IP addresses? Select all that apply.
+    Ans: 192.0.2.235, 4527:0db8:0a00:1567:0200:ff00:0042:8329
+
+Q3. When using TCP, data can arrive out of order.
+    Ans: False
+
+Q4. Which of the following are valid HTTP methods? Select all that apply.
+    Ans: GET, POST, DELETE
+
+Q5. HTML describes the structure and content of a web page.
+    Ans: True
+
+Q6. When you type a website address (for example, coursera.org) in your web browser, which protocol is used to find the IP address of the website?
+    Ans: Domain Name System Protocol (DNS)
+
+Q7. A web application is more ________________ compared to a website.
+    Ans: Interactive
+
+
+--- Developer Tools ---
+
+* As a frontend developer, we can look under the wood and see how the code works. Browsers are usually equipped with Developer Tools allows to inspect HTML, CSS and JS code, as well as tracing HTTP request, investigate performance issue and security.
+
+    > "Console" tab shows JS logs and errors from the app.
+    > "Sources" tab displays all content resolved for the current page, HTML, CSS, JS, images and videos.
+    > "Network" tab inspects the timeline and details of HTTP requests and responses for the web page.
+    > "Memory" tab displays the parts of the code which consume the most resources."
+    > "Performance" tab shows what the browser is doing over time.
+    > "Elements" tab can be used to inspect the HTML elements and their properties (margins, paddings, etc.)
