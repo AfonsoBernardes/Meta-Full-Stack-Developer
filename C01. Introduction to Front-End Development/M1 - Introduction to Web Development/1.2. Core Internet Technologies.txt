@@ -215,4 +215,29 @@ Q1. What is the value of the ID attribute for the Little Lemon logo?
 
 --- APIs and Services ---
 
-*
+* An API (Application Programmming Interface) is a set of functions and procedures for creating applications that access the features or data of an operating system, application or other service.
+
+* APIs serve as the bridge between components or systems, earning them names like gateway or middleware; the term is widely used to represent many different tools and systems.
+
+    > Browser/ Web APIs
+
+        - built into the browser istelf.
+        - extend browser's functionality by adding new services.
+        - designed to simplify complex functions and provide easy syntax for building advanced features.
+        - Example: DOM API turns a  HTML documents into a tree of nodes represented as JS objects.
+
+
+    > RESTful API
+
+        - provides data for web and mobile apps; also called web servers.
+        - REST, or Representation State Transfer, is a set of principles used to build highly efficient APIS.
+        - these APIs send and recieve data to and from a centralised database.
+        - these APIs use endpoints to specify how different resources can be accessed; the endpint is built into the URL when accessing the API.
+        - once the endpoint is hit, the API performs whatever service side processing is needed for the response.
+
+
+    > Sensor-Based API
+
+        - IoT is based on this concept.
+        - these are actual physical sensors that are interconnectedwith each other.
+        - the sensors communicate via an API to track and respond to physical data.
