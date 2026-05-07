@@ -190,3 +190,27 @@ Q7. A web application is more ________________ compared to a website.
     > "Memory" tab displays the parts of the code which consume the most resources."
     > "Performance" tab shows what the browser is doing over time.
     > "Elements" tab can be used to inspect the HTML elements and their properties (margins, paddings, etc.)
+
+
+--- Self Review: Examine a Page ---
+
+Q1. What is the value of the ID attribute for the Little Lemon logo?
+    Ans: logo1
+
+
+--- Frameworks and Libraries ---
+
+* Libraries are reusable pieces of code which are purpose-built to provide a specific functionality: these can be used in one's own application. For example, if you want to implement a user login in you application, we could use a library to validate th email address.
+
+* Frameworks provide a structure for developers to build with. For example, a carpenter who builds a lot of chairs should have a blueprint to speed up the building process; he can decide on the colour and material, but dimensions and style of the chairs are always the same.
+
+* In the case of a developer building a web application, a framework  would handle recieving HTTP requests, while the developer would implement the logic  to process the requests and to return a response, which the framework would send via HTTP.
+
+* Most frameowrks use many libraries, one's app can use libraries within the framework. Frameworks are usually opinionated; this is defined by the degree of freedom a developer has to code a feature.
+
+    > Frameworks save a lot of time, and enforce a structure on how to write the code abiding to bets practices. On the other hand, there are hard structural constraints which might not let you write a feature in a certain way, furthermore, there might be compatibility issues with libraries within the framework.
+
+    > Libraries can be easily replaced for a new, better one; however deciding on a library is not always an easy task, and we still need to deal with campatibility issues.
+
+
+
