@@ -104,9 +104,9 @@
 
     * When a computer connects to a network, the DHCP  is used to assign your computer an IP address.
 
-    *A computer communicates over User Datagram Protocol (UDP) using the protocol with a type of server called a DHCP server. The server keeps track of computers on the network and their IP addresses. It will assign your computer an IP address and respond over the protocol to let it know which IP address to use.
+    * A computer communicates over User Datagram Protocol (UDP) using the protocol with a type of server called a DHCP server. The server keeps track of computers on the network and their IP addresses. It will assign your computer an IP address and respond over the protocol to let it know which IP address to use.
 
-    *Once your computer has an IP address, it can communicate with other computers on the network.
+    * Once your computer has an IP address, it can communicate with other computers on the network.
 
 
 -> Domain Name System Protocol (DNS)
@@ -241,3 +241,58 @@ Q1. What is the value of the ID attribute for the Little Lemon logo?
         - IoT is based on this concept.
         - these are actual physical sensors that are interconnectedwith each other.
         - the sensors communicate via an API to track and respond to physical data.
+
+
+--- Integrated Development Environment ---
+
+* An IDE is just like a text editor, but instead of writing documents, one writes code. IDEs can be specific to one programming language or can be used for multiple languages.
+
+* IDEs have a lot of tools which help development, like syntax highlighting for better readibility, error highlighting to point out mistakes, autocomplete and refactor code with IntelliSense.
+
+
+--- Knowledge Check: Core Internet Technologies ---
+
+Q1. Which of the following can be done using the developer tools in your browser? Select all that apply.
+    Ans: Inspect the HTML elements of a web page, check JavaScript error logs, inspect a timeline of HTTP requests and responses, inspect the performance and memory usage of a webpage.
+
+Q2. In software development, a library provides _________________________.
+    Ans: Reusable pieces of code that can be used by your application.
+
+Q3. In software development, an API is _________________________.
+    Ans: a set of functions that an application component or service can provide.
+
+Q4. Which of the following are benefits of using an Integrated Development Environment (IDE) such as Visual Studio Code? Select all that apply.
+    Ans: Syntax Highlighting, Error Highlighting, Autocomplete, IntelliSense.
+
+
+--- Module Quiz: Get started with Web Development ---
+
+Q1. When two computers connect directly to each other, this forms  ______________.
+    Ans: a Network
+
+Q2. The programs that run on a computer are called the ______________.
+    Ans: Software
+
+Q3. The structure of a web page is defined using ______________.
+    Ans: HTML
+
+Q4. The style of a web page is defined using ______________.
+    Ans: CSS
+
+Q5. Computers communicate with each other using which protocol?
+    Ans: Internet Protocol
+
+Q6. To communicate with another computer on a network, your computer sends a message called an __________________.
+    Ans: IP Packet
+
+Q7. The web browser and web server use which protocol to transfer data?
+    Ans: HTTP
+
+Q8. In software development, a framework provides a structure for developers to build an application.
+    Ans: True
+
+Q9. As a developer, it is best to use a _____________ to write and maintain code.
+    Ans: Integrated Development Environment
+
+Q10. In software development, an API is a set of functions that an application component or service can provide.
+    Ans: True
