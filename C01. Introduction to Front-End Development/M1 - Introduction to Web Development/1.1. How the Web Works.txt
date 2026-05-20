@@ -84,7 +84,7 @@
         - we can use as many resources as needed without hardware limitations, paying according to resources used
 
 
---- Knowledge Check ---
+--- Knowledge Check: How the web works ---
 
 Q1. In the client/server model, the accessing device is a ____________________.
     Ans: Client

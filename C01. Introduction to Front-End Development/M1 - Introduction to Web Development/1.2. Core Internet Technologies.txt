@@ -2,4 +2,297 @@
 
 --- Internet Protocols ---
 
-*
+* The way computers send and recieve data across the internet can compared to a postal system. Computers have addresses we can use to send packets of information, these are called IP Adresses.
+
+* When we send data between computers, the computers are the destination which request and recieve data, and the network are the routes the information travels across. Internet protocols are what make these transactions possible, IP Version 4 and IP Version 6 are the most widely use standards.
+
+* Every computer on a netwrok is assigned an IP Address:
+
+    > In IP Version 4, an IP address contains four octets, separated by periods, i.e., 192.0.2.235.
+
+    > In IP Version 6, an IP address contains eight groups of hexadecimal digits separated by a colon.
+
+* When we send data across a netwrok, we send it as a series of messages known as IP Packets, or dataframs, which contain a header and a payload, which is the data. These packets include the destination IP address and the source IP address in the headers.
+
+* When sending multiple messages, it is possible they are recieved out of order, damaged or even lost. The payload contains other protocols:
+
+    > TCP (Transmission Control Protocol) can solve all of the three issues but at a small delay. It is used to sen data which must arrive correctly and in order, like text or image files.
+
+    > UDP (User Datagram Protocol) solves the corrupted package issue, but packets can still arrive out of order or not at all; it is used for sending data which can tolerate some loss, like voice calls or video streaming.
+
+
+--- LAB: Exploring Internet Protocols through Command-Line Tool ---
+
+    > Command: ping courser.org
+
+    > Output: 
+        PING coursera.org (99.86.159.65) 56(84) bytes of data.
+
+        64 bytes from server-99-86-159-65.lis50.r.cloudfront.net (99.86.159.65): icmp_seq=1 ttl=250 time=12.6 ms
+        64 bytes from server-99-86-159-65.lis50.r.cloudfront.net (99.86.159.65): icmp_seq=2 ttl=250 time=15.3 ms
+
+        --- coursera.org ping statistics ---
+        9 packets transmitted, 9 received, 0% packet loss, time 8011ms
+        rtt min/avg/max/mdev = 12.564/15.236/16.595/1.029 ms
+
+        - coursera.org (99.86.159.65): the domain name coursera-org resolves to the given IP address, which is the address of on of Coursera's servers.
+
+        - Each line shows the details of the ICMP Echo Reply packets received
+
+            1. 64 bytes: The size of each ICMP packet sent and received is 64 bytes.
+            2. time=12.6 ms/ time=15.3 ms: round-trip times (RTT) it took for the packet to travel from your computer to the server and back.
+            3. ttl=250: Time-to-Live value of the packet. This value decreases as the packet passes through network hops (routers). It gives an idea of the network's distance.
+
+        - Ping Statistics
+
+            1. 9 packets transmitted, 9 received, 0% packet loss
+            2. rtt min/avg/max/mdev = fastest/average/maximum/mean_deviation for the packets' round-trip
+
+
+--- Hypertext Transfer Protocol (HTTP) ---
+
+* Core request-response operation protocol used across the web, enabling the browsers to communicate with web servers hosting websites. A client sends an HTTP request to a server which sends a HTTP response back to the client.
+
+* A HTTP request contains a method, path protocol and headers
+
+    <METHOD> <PATH> <PROTOCOL VERSION>
+    <HEADERS>
+    \r\n
+    <REQUEST BODY>
+
+    GET / HTTP/1.1
+    Host: developer.mozilla.org
+    Accept-Language: en
+
+    {"key": "value"}
+
+    > METHOD: describes the type of action to perform (eg. GET, POST, PUT, DELETE)
+    > PATH: where the resource is stored on the web server (eg example.com/images)
+    > HEADERS: contains additional information about the request and the client
+    > BODY: included when using the HTTP POST and PUT methods to transmit data.
+
+* A HTTP response is similar to the request
+
+    <PROTOCOL> <STATUS CODE> <MESSAGE>
+    <HEADERS>
+    \r\n
+    <MESSAGE BODY>
+
+* Status codes are grouped according to their purpose:
+
+    > Informational are provisional and interim before the actual response. Range from 100 to 199.
+    > Successful indicate the request was successefully processed by the server. Range from 200 to 299.
+    > Redirection indicate to the client that the resource was moved to a different part. Range from 300 to 399.
+    > Client Error indicate the request contains bad syntax or content and cannot be processed by the server. Range from 400 to 499.
+    > Server Error indicate that a failure occured on the web server when processing the request. Range from 500 to 599.
+
+* HTTPS uses encryption to establish a secure connection, maintaining simple HTTP request and reponse behaviour; before the content is sent, it is turned into a "secret code" which can only be read by the destination computer.
+
+
+--- Intro to HTML, CSS & JavaScript ---
+
+* These three technologies "work together" to create a functional webpage. HTML defines the contents of the page, CSS adds positioning and styling while JavaScript manages the logic behind it.
+
+* The .html file references the .css file to apply styling and the .js file. The browser will retrieve the .js file and process it. In a video player webpage with a button to play/ pause a video, the .js file will
+    > registers a listener on the button which executes some code when clicked.
+    > when the code runs, it checks the current state of the vidoe, i.e., if the video is paused, it will play the video and change the icon on the button to pause; on the other hand, if the video is playing, the .js code will pause the video and change the icon to a play icon.
+
+
+--- Other Internet Protocols ---
+
+-> Dynamic Host Configuration Protocol (DHCP)
+
+    * When a computer connects to a network, the DHCP  is used to assign your computer an IP address.
+
+    * A computer communicates over User Datagram Protocol (UDP) using the protocol with a type of server called a DHCP server. The server keeps track of computers on the network and their IP addresses. It will assign your computer an IP address and respond over the protocol to let it know which IP address to use.
+
+    * Once your computer has an IP address, it can communicate with other computers on the network.
+
+
+-> Domain Name System Protocol (DNS)
+
+    * A computer needs a way to know with which IP address to communicate when you visit a website in your web browser. The Domain Name System Protocol, provides this function.
+    * The computer then checks with the DNS server associated with the domain name and then returns the correct IP address.
+
+
+-> Internet Message Access Protocol (IMAP)
+
+    * A device (mobile or tablet) needs a way to download emails and manage the mailbox on the server storing the emails; whihc is the purpose of this protocol.
+
+-> Simple Mail Transfer Protocol (SMTP)
+
+    * Once the emails are on the device, one needs a way to send emails. The Simple Mail Transfer Protocol allows email clients to submit emails for sending via an SMTP server. One can also use it to receive emails from an email client, but IMAP is more commonly used.
+
+
+-> File Transfer Protocol (FTP)
+
+    * Running websites and web applications on the Internet needs a way to transfer the files from the local computer to the server they'll run on. FTP is the standar protocol used for this purpose.
+
+    * FTP allows you to list, send, receive and delete files on a server. Your server must run an FTP Server and you will need an FTP Client on your local machine.
+
+
+-> Secure Shell Protocol (SSH)
+
+    * When working with servers, we need a way to log in and interact with the computer remotely; the most common method being Secure Shell Protocol.
+
+    * Using an SSH client allows you to connect to an SSH server running on a server to perform commands on the remote computer.
+
+    *All data sent over SSH is encrypted. This means that third parties cannot understand the data transmitted. Only the sending and receiving computers can understand the data.
+
+
+-> Secure File Transfer Protocol (SFTP)
+
+    * The data is transmitted insecurely when using the File Transfer Protocol. This means that third parties may understand the data that you are sending. This is not right if you transmit company files such as software and databases.
+
+    * The SSH File Transfer Protocol, alternatively called the Secure File Transfer Protocol, can be used to transfer files over the SSH protocol. This ensures that the data is transmitted securely. Most FTP clients also support the SFTP protocol.
+
+
+--- Webpages, Websites and Web Apps ---
+
+* A typical webpage is a single pages with HTML, CSS and JS. A website is a collection of webpages under the same domain name.
+
+* Website and Web Applications are often used interchangibily, whoever, the key difference is the level of interactivity and dynamic content.
+
+* A website is more informative while a web app is more interactive. A company website usually displays info about themselves, but the same company's web app would allow you to, for example, log in, edit you account details, order food, etc.
+
+
+--- Knowledge Check: The Web and the Internet ---
+
+Q1. When sending a message to another computer, the source and destination are specified using  ________________.
+    Ans: an IP Address
+
+Q2. Which of the following are valid IP addresses? Select all that apply.
+    Ans: 192.0.2.235, 4527:0db8:0a00:1567:0200:ff00:0042:8329
+
+Q3. When using TCP, data can arrive out of order.
+    Ans: False
+
+Q4. Which of the following are valid HTTP methods? Select all that apply.
+    Ans: GET, POST, DELETE
+
+Q5. HTML describes the structure and content of a web page.
+    Ans: True
+
+Q6. When you type a website address (for example, coursera.org) in your web browser, which protocol is used to find the IP address of the website?
+    Ans: Domain Name System Protocol (DNS)
+
+Q7. A web application is more ________________ compared to a website.
+    Ans: Interactive
+
+
+--- Developer Tools ---
+
+* As a frontend developer, we can look under the wood and see how the code works. Browsers are usually equipped with Developer Tools allows to inspect HTML, CSS and JS code, as well as tracing HTTP request, investigate performance issue and security.
+
+    > "Console" tab shows JS logs and errors from the app.
+    > "Sources" tab displays all content resolved for the current page, HTML, CSS, JS, images and videos.
+    > "Network" tab inspects the timeline and details of HTTP requests and responses for the web page.
+    > "Memory" tab displays the parts of the code which consume the most resources."
+    > "Performance" tab shows what the browser is doing over time.
+    > "Elements" tab can be used to inspect the HTML elements and their properties (margins, paddings, etc.)
+
+
+--- Self Review: Examine a Page ---
+
+Q1. What is the value of the ID attribute for the Little Lemon logo?
+    Ans: logo1
+
+
+--- Frameworks and Libraries ---
+
+* Libraries are reusable pieces of code which are purpose-built to provide a specific functionality: these can be used in one's own application. For example, if you want to implement a user login in you application, we could use a library to validate th email address.
+
+* Frameworks provide a structure for developers to build with. For example, a carpenter who builds a lot of chairs should have a blueprint to speed up the building process; he can decide on the colour and material, but dimensions and style of the chairs are always the same.
+
+* In the case of a developer building a web application, a framework  would handle recieving HTTP requests, while the developer would implement the logic  to process the requests and to return a response, which the framework would send via HTTP.
+
+* Most frameowrks use many libraries, one's app can use libraries within the framework. Frameworks are usually opinionated; this is defined by the degree of freedom a developer has to code a feature.
+
+    > Frameworks save a lot of time, and enforce a structure on how to write the code abiding to bets practices. On the other hand, there are hard structural constraints which might not let you write a feature in a certain way, furthermore, there might be compatibility issues with libraries within the framework.
+
+    > Libraries can be easily replaced for a new, better one; however deciding on a library is not always an easy task, and we still need to deal with campatibility issues.
+
+
+--- APIs and Services ---
+
+* An API (Application Programmming Interface) is a set of functions and procedures for creating applications that access the features or data of an operating system, application or other service.
+
+* APIs serve as the bridge between components or systems, earning them names like gateway or middleware; the term is widely used to represent many different tools and systems.
+
+    > Browser/ Web APIs
+
+        - built into the browser istelf.
+        - extend browser's functionality by adding new services.
+        - designed to simplify complex functions and provide easy syntax for building advanced features.
+        - Example: DOM API turns a  HTML documents into a tree of nodes represented as JS objects.
+
+
+    > RESTful API
+
+        - provides data for web and mobile apps; also called web servers.
+        - REST, or Representation State Transfer, is a set of principles used to build highly efficient APIS.
+        - these APIs send and recieve data to and from a centralised database.
+        - these APIs use endpoints to specify how different resources can be accessed; the endpint is built into the URL when accessing the API.
+        - once the endpoint is hit, the API performs whatever service side processing is needed for the response.
+
+
+    > Sensor-Based API
+
+        - IoT is based on this concept.
+        - these are actual physical sensors that are interconnectedwith each other.
+        - the sensors communicate via an API to track and respond to physical data.
+
+
+--- Integrated Development Environment ---
+
+* An IDE is just like a text editor, but instead of writing documents, one writes code. IDEs can be specific to one programming language or can be used for multiple languages.
+
+* IDEs have a lot of tools which help development, like syntax highlighting for better readibility, error highlighting to point out mistakes, autocomplete and refactor code with IntelliSense.
+
+
+--- Knowledge Check: Core Internet Technologies ---
+
+Q1. Which of the following can be done using the developer tools in your browser? Select all that apply.
+    Ans: Inspect the HTML elements of a web page, check JavaScript error logs, inspect a timeline of HTTP requests and responses, inspect the performance and memory usage of a webpage.
+
+Q2. In software development, a library provides _________________________.
+    Ans: Reusable pieces of code that can be used by your application.
+
+Q3. In software development, an API is _________________________.
+    Ans: a set of functions that an application component or service can provide.
+
+Q4. Which of the following are benefits of using an Integrated Development Environment (IDE) such as Visual Studio Code? Select all that apply.
+    Ans: Syntax Highlighting, Error Highlighting, Autocomplete, IntelliSense.
+
+
+--- Module Quiz: Get started with Web Development ---
+
+Q1. When two computers connect directly to each other, this forms  ______________.
+    Ans: a Network
+
+Q2. The programs that run on a computer are called the ______________.
+    Ans: Software
+
+Q3. The structure of a web page is defined using ______________.
+    Ans: HTML
+
+Q4. The style of a web page is defined using ______________.
+    Ans: CSS
+
+Q5. Computers communicate with each other using which protocol?
+    Ans: Internet Protocol
+
+Q6. To communicate with another computer on a network, your computer sends a message called an __________________.
+    Ans: IP Packet
+
+Q7. The web browser and web server use which protocol to transfer data?
+    Ans: HTTP
+
+Q8. In software development, a framework provides a structure for developers to build an application.
+    Ans: True
+
+Q9. As a developer, it is best to use a _____________ to write and maintain code.
+    Ans: Integrated Development Environment
+
+Q10. In software development, an API is a set of functions that an application component or service can provide.
+    Ans: True
